@@ -4,5 +4,6 @@ sudo apt-get install ghostscript
 sudo apt-get install cmake
 sudo apt-get install default-jdk
 sudo apt-get install mvn
+sudo apt-get install imagemagick 
 
 sudo mvn install:install-file -Dfile=./aspose-barcode-22.5.jar -DgroupId=com.aspose -DartifactId=aspose-barcode -Dpackaging=jar -Dversion=22.5

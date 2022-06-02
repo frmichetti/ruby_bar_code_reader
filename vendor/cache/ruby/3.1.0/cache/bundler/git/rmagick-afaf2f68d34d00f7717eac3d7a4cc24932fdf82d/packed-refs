@@ -1,0 +1,133 @@
+# pack-refs with: peeled fully-peeled sorted 
+cf44f189f959772e313f04d2fb485318aa483845 refs/heads/bf/compilation
+c2a95304d4139ea39a7b461df4acdf07be72f01b refs/heads/cross-platform-native-gems
+d93b747027d0723372c20fb4fae8eeeee153b222 refs/heads/fix-version-check-on-187
+e4fa2d8f64aa043da86df4044854e6f6aef1c12a refs/heads/improve-extconf
+ed3950b1b972a551169cf1dfd88264b109069d5b refs/heads/larf-chroma_confused
+339b5f6bc2f2e84320d78c151f73a3048a3b805d refs/heads/main
+924768224dd9874f087ae34254b9ca572af4aeb1 refs/heads/rf-stderr_raise
+904b2f816886f9b4772cccf6747a89a48d543cc7 refs/tags/From_RubyMagick
+904b2f816886f9b4772cccf6747a89a48d543cc7 refs/tags/R1-2-2
+06165838055ce1c81d0ffbe8830295f645b19bd4 refs/tags/RMagick_1-10-0
+fa2dc4f91449dce0a10ede63e4c1d87b3f763b57 refs/tags/RMagick_1-10-1
+2a7e91fb19d8608c835227ac565c71ecf178c8bb refs/tags/RMagick_1-11-0
+2b62642fa925adb50fdde8f634e906fdfcb30221 refs/tags/RMagick_1-11-1
+4aabaeaa89204d3360abf1428444eaa4915d57d0 refs/tags/RMagick_1-12-0
+99323364289c0166b440fadde348235b50fa1e85 refs/tags/RMagick_1-13-0
+6ad5275bd5a3855e7bfbf2e6a23cd0eb1df9bafd refs/tags/RMagick_1-14-1
+7c1292091c98d13eda6aa30b44bb32845a5075e2 refs/tags/RMagick_1-15-0
+218b3b8f810ea0d28648395a1a854fe032a07866 refs/tags/RMagick_1-15-0-fixes
+1deac7900394ea0345d3531469e84f7cd43a58dc refs/tags/RMagick_1-15-0-updates
+d1d653dceaec67f42b8edc2d2dc9380f95e8eaf7 refs/tags/RMagick_1-15-1
+769c0c653bd7b3d9cb8dd394cd3c2ca3b3835c00 refs/tags/RMagick_1-15-10
+4d9680518fabbb309649b1b927d5a4d3c5561e0a refs/tags/RMagick_1-15-11
+889e9c8e1b8109ec1352d0472c02e35add7b9a97 refs/tags/RMagick_1-15-12
+03e1484d1556ad12ab0c9223abcd2127433f3ec1 refs/tags/RMagick_1-15-13
+dfe6d118367ea8298b832ccd808c00c5d2747e66 refs/tags/RMagick_1-15-14
+753c4d76a3bd47662eff954a515a8d00c28bd3d1 refs/tags/RMagick_1-15-15
+1cf38e59db63138a9f681dcd7a2e34e6c31f7df6 refs/tags/RMagick_1-15-16
+1deac7900394ea0345d3531469e84f7cd43a58dc refs/tags/RMagick_1-15-17
+f8e5f2689cb98119f981bc6bb912a440048f621e refs/tags/RMagick_1-15-2
+af4a597c447bf4cc9bdca0e276eb4ebcb1cc1e7c refs/tags/RMagick_1-15-3
+bb93511bb0b03374a66622c1df9769d1a037d031 refs/tags/RMagick_1-15-4
+62f7e03046d8393f2a291d980a2c28e62b86c587 refs/tags/RMagick_1-15-5
+531a83969e508122ca757c0df5a062864415ab81 refs/tags/RMagick_1-15-6
+0b795030f2095e0a486d3dc7b8660ef190d8f8bf refs/tags/RMagick_1-15-7
+7a904c3fe5ce06061f531eb090aa2659487627c5 refs/tags/RMagick_1-15-8
+218b3b8f810ea0d28648395a1a854fe032a07866 refs/tags/RMagick_1-15-9
+6ce3df857059976f9c08f1fb7a1546a2806b60c1 refs/tags/RMagick_1-3-0
+80a604c28ef220330777ac1c320a08b318a1d3d8 refs/tags/RMagick_1-3-1
+13f2363e9e5e19fee0bbcf5bb714c200c9364b4a refs/tags/RMagick_1-3-2
+0b253b4d191262972f9a4a3818f1e4e4ff2ebc58 refs/tags/RMagick_1-4-0
+518ca405e447c40bf85e9de0f63fb4c03d1b0f70 refs/tags/RMagick_1-5-0
+eb2637daa031c0bab8f039977cbe648471b53c04 refs/tags/RMagick_1-6-0
+dccc0f9994d3dc835ef645d79e8d7854e7f4e248 refs/tags/RMagick_1-6-1
+dccc0f9994d3dc835ef645d79e8d7854e7f4e248 refs/tags/RMagick_1-6-2
+2bef0a4a8972fd85203bcace396b13b3a04908b1 refs/tags/RMagick_1-7-0
+f7d53e7870eb4ee71d9bdc69b00f740ad0f2c511 refs/tags/RMagick_1-7-1
+9a4c079b81751f9d62f171b03a0251248c272214 refs/tags/RMagick_1-7-2
+79cdd969417f2dc94d7d9fb823b74ed9a242092a refs/tags/RMagick_1-7-4
+f0befb53256c76ee5134a86597c8d2ce1899512f refs/tags/RMagick_1-8-0
+e23f19df3aa2512218dcd45a02bf8a3312de6ceb refs/tags/RMagick_1-8-1
+7c6526cb19e7ec50f614c3a17e1637e4607a46bb refs/tags/RMagick_1-8-2
+a2f589ac6fe966b89e37a52c1445ff342cfae1c0 refs/tags/RMagick_1-8-3
+e779ff5a3c8993979a634a24a466bbf78f9e9499 refs/tags/RMagick_1-9-0
+f584933f0400c4d43b905becab5f4264448e03e9 refs/tags/RMagick_1-9-1
+4b2f832ef523ea1c7cd9ebf3e3602a3e8dc4b9c0 refs/tags/RMagick_1-9-2
+74ee6782ef09dc170a029dafeb03cf2bdce5aca1 refs/tags/RMagick_1-9-3
+17917d312b605b1259fd2c567f193d9379e0a377 refs/tags/RMagick_2-0-0
+303515dae7fd2badbdf76b5b326b0a278c8bab91 refs/tags/RMagick_2-1-0
+f3243822ce48aed4a429d827cb969bb5c1900a51 refs/tags/RMagick_2-10-0
+79ab826e498deb17137fdb3bcddaca6ba3a14b1f refs/tags/RMagick_2-11-0
+5bddd60ece942d2f0630f9413fd799e68ca6201a refs/tags/RMagick_2-11-1
+d536c662a0fdeb05f1910fed96ea470309a7fbad refs/tags/RMagick_2-12-0
+39ad396369915204e2b0cc36826028e6516a9610 refs/tags/RMagick_2-12-1
+0beb9b3497ebd2d63dbf9554f4c2f99e5a7ece63 refs/tags/RMagick_2-12-2
+aebcf65f28e3ab8b079a6cb07dd5b2d78dfbde4e refs/tags/RMagick_2-13-0
+df3bb9582fdea0f34ff1f51335e62d009fbda29c refs/tags/RMagick_2-13-1
+7b36bdc2c67b350fa6471622bd68093bb40301d3 refs/tags/RMagick_2-13-2
+810b2d414d35b645c57b8c9fa60f48cfe405ad7c refs/tags/RMagick_2-13-3
+^0fe89ec2c3f117cf19d24057c403318aa1150718
+755552e7e44f65146ee1cd948740e9924d46fa7c refs/tags/RMagick_2-13-4
+^20e4084db566d9353408bbc9db818c64f1532f32
+9cbddb78eb8ccea6fceed26b597ae54c22eeab6b refs/tags/RMagick_2-14-0
+^40d7c036a0f41f91436ffafac4c1c12386249fb7
+75f94c4c31a76e1590151038795c5b2dd392cc25 refs/tags/RMagick_2-15-0
+^529cfc913b7939ee4330df099d189b65aceaab50
+067ad655ccd37d24b8d5aab41d8d99792f6bd884 refs/tags/RMagick_2-15-1
+^20831cc2c5332226372d9d05cbc572b1c0d8a2c5
+c0d0b5a34f6429147078d5df5e27855d12e7832f refs/tags/RMagick_2-15-2
+^aeb305e5e1e40d9e7b1c580ede7d62ca51b781af
+758a77d5ba6c7622c81c77e4578bd514b6ac37f9 refs/tags/RMagick_2-15-3
+^6507ce4df5da16d9cd465baf8d1435dee2e05ba3
+e297a657df1693d7c932655dff0a0f3257313e2f refs/tags/RMagick_2-15-4
+^37b268c8a5911ae2bc0be34cd01dbf3321669b73
+fd50c03520312b4680bcaed8d965e2e5f320b375 refs/tags/RMagick_2-16-0
+^ff60984be5792a91a4853ee15bbb203a97dd6afd
+0d01f7cc0e29ca3905c9e8d4526e2ca32ad387de refs/tags/RMagick_2-2-0
+d6ce4b8bbe5433ca7efad0ef6cff847e98607f8c refs/tags/RMagick_2-2-2
+50932f82aabf4366f6c41e80ff26b6d062077729 refs/tags/RMagick_2-3-0
+c6ede0657a14ab4dfd3e88b8989fbe6b982b704a refs/tags/RMagick_2-4-0
+5c8d16c132fee15dcd8a95405dd466284ead47b9 refs/tags/RMagick_2-5-0
+cadacd1b1812ed65bdde1c73571efc1f5b9b9397 refs/tags/RMagick_2-5-1
+0e639d392c09508fb2c9529ea243607b20ffbdba refs/tags/RMagick_2-5-2
+2ac1b17e606323f53703c1f4b543a620741e610b refs/tags/RMagick_2-6-0
+b6d5379849b3ee9496751d545a5fcf40439a477a refs/tags/RMagick_2-7-0
+776d0e8c5cae2e4773d546ce3afab9aebbe2e829 refs/tags/RMagick_2-7-1
+0c9467a0242ff94a0cc5f3d38b461b6c86455e31 refs/tags/RMagick_2-7-2
+90822da12b487a0ab99899a1b74ee8552cef3883 refs/tags/RMagick_2-8-0
+696ea69b3e9d8bca943ab0eb61e222a2d60540da refs/tags/RMagick_2-9-0
+d61f8245406648bc6e181ae0147454fc8ded65a9 refs/tags/RMagick_2-9-1
+722b62029a20946055c2f160619472a1810e9ad5 refs/tags/RMagick_2-9-2
+c808468f4d9753e1fb91dbe56dd81d714d343fb8 refs/tags/RMagick_3-0-0
+^f7472232d5cb0f3e66ba87a68e8e3bfa7ae729cb
+c6e3cbdf04107ab90c0a8b6c533bb04f3c188f14 refs/tags/RMagick_3-1-0
+^4f1a1cebb5b218bc2bc7a9f2f835da4efdbfc03b
+5f0c78641015911e286e4a3b27b3d6761a2570d1 refs/tags/RMagick_3-2-0
+^ee31b05e48e544fc15c4135e4ab27c379680cc90
+c7f0e5d50c0263d0e8876487b72add9d9021aa40 refs/tags/RMagick_4-0-0
+^956c025347444337837f36fed333ca0e9fff3127
+cbe7e5fb1196013a57ecae46b3a396f0df16adee refs/tags/RMagick_4-1-0
+^e1d44a97a11f92b7304a360ca9bc4b6ac443074a
+1ab4ea46f6a40381b650fa05d9ca49a4bfee7726 refs/tags/RMagick_4-1-0-rc1
+^8a5c03c6908631d33687c70d877b3660e4704b40
+d845f276028aad4b3a51b44a3ffafcd0beb6623d refs/tags/RMagick_4-1-0-rc2
+^339ad7468d5f48e3ca9c76a81f8b4df608a2b475
+073847bb3b3d036e2ec2234bc52391d22f9654d3 refs/tags/RMagick_4-1-1
+^bddcc2b745627472ed5768e7e51b2ad35f4c0f9a
+0469ec75d56d05b777a719f1402f9ad9f1055ae1 refs/tags/RMagick_4-1-2
+^77972dad0657a6962910bf581a16b10683074716
+e0eb993f8cc9fb4fc7cc09f2c79e73b3f9309478 refs/tags/RMagick_4-2-0
+^1b70a195563cc8e6ff9a18ab8dc62953037e9f0d
+69b4cfbbb3d15ad2dd100c1c4c3155c753f7ae13 refs/tags/RMagick_4-2-1
+^2625f5ff60507a8f7ae337c71e6db0bb1b1546c1
+63b1dc4624e58cd864f94cd417573e7b16fe5d17 refs/tags/RMagick_4-2-2
+^795b7298569bfbc4ddba00afc879b0ae1c7ee081
+8d3b1ffd242339a18b72233748030cf9e98015ca refs/tags/RMagick_4-2-3
+^2ef1510102bf2dedc3288d19dd63fc02ab7a48da
+0f995003e0db00e7820b4f827deca77a816f005d refs/tags/RMagick_4-2-4
+^d33080113ccccdc31f4763348c3489ceea10fc61
+29cd76fbda353c3fe781c52a6e97fd9cac8e7bdf refs/tags/RMagick_4-2-5
+^6d3b332071fa061c5b8ae68ff39d15780711edb0
+28c293ff2f2df37c36f530baee646d6e89cea229 refs/tags/list
+8614f0c5d50e675877cb93f784e5f2bea94749ee refs/tags/v2

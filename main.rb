@@ -11,7 +11,7 @@ class Image
   end
 
 get '/' do
-  'Hello World'
+  'Hello World'  
 end
 
 post '/decode' do     

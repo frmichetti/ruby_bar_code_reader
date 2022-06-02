@@ -1,0 +1,312 @@
+current directory: /home/felipe/DEV/ruby_bar_code_reader/vendor/cache/ruby/3.1.0/gems/zipruby-0.3.6/ext
+/home/felipe/.rbenv/versions/3.1.0/bin/ruby -I /home/felipe/.rbenv/versions/3.1.0/lib/ruby/3.1.0 -r ./siteconf20220602-7609-p1pemt.rb extconf.rb
+checking for zlib.h... yes
+checking for -lz... yes
+checking for fseeko()... yes
+checking for ftello()... yes
+checking for mkstemp()... yes
+creating Makefile
+
+current directory: /home/felipe/DEV/ruby_bar_code_reader/vendor/cache/ruby/3.1.0/gems/zipruby-0.3.6/ext
+make DESTDIR\= clean
+
+current directory: /home/felipe/DEV/ruby_bar_code_reader/vendor/cache/ruby/3.1.0/gems/zipruby-0.3.6/ext
+make DESTDIR\=
+compiling mkstemp.c
+mkstemp.c: In function ‘_zip_mkstemp’:
+mkstemp.c:69:8: warning: implicit declaration of function ‘getpid’ [-Wimplicit-function-declaration]
+   69 |  pid = getpid();
+      |        ^~~~~~
+mkstemp.c: At top level:
+cc1: warning: unrecognized command line option ‘-Wno-self-assign’
+cc1: warning: unrecognized command line option ‘-Wno-parentheses-equality’
+cc1: warning: unrecognized command line option ‘-Wno-constant-logical-operand’
+compiling tmpfile.c
+tmpfile.c: In function ‘zipruby_tmpnam’:
+tmpfile.c:88:18: warning: initialization discards ‘const’ qualifier from pointer target type [-Wdiscarded-qualifiers]
+   88 |   char *dirnam = P_tmpdir;
+      |                  ^~~~~~~~
+tmpfile.c: At top level:
+cc1: warning: unrecognized command line option ‘-Wno-self-assign’
+cc1: warning: unrecognized command line option ‘-Wno-parentheses-equality’
+cc1: warning: unrecognized command line option ‘-Wno-constant-logical-operand’
+compiling zip_add.c
+compiling zip_add_dir.c
+compiling zip_close.c
+zip_close.c: In function ‘zip_close’:
+zip_close.c:146:29: warning: assignment discards ‘const’ qualifier from pointer target type [-Wdiscarded-qualifiers]
+  146 |       cd->entry[j].filename = "-";
+      |                             ^
+zip_close.c: In function ‘copy_data’:
+zip_close.c:475:11: warning: comparison of integer expressions of different signedness: ‘off_t’ {aka ‘long int’} and ‘long unsigned int’ [-Wsign-compare]
+  475 |  nn = len > sizeof(buf) ? sizeof(buf) : len;
+      |           ^
+zip_close.c:475:41: warning: operand of ?: changes signedness from ‘off_t’ {aka ‘long int’} to ‘long unsigned int’ due to unsignedness of other operand [-Wsign-compare]
+  475 |  nn = len > sizeof(buf) ? sizeof(buf) : len;
+      |                                         ^~~
+zip_close.c: At top level:
+cc1: warning: unrecognized command line option ‘-Wno-self-assign’
+cc1: warning: unrecognized command line option ‘-Wno-parentheses-equality’
+cc1: warning: unrecognized command line option ‘-Wno-constant-logical-operand’
+compiling zip_crypt.c
+zip_crypt.c:25:8: warning: return type defaults to ‘int’ [-Wimplicit-int]
+   25 | static zipenc_crc32(uLong crc, char c) {
+      |        ^~~~~~~~~~~~
+zip_crypt.c: In function ‘zipenc_crc32’:
+zip_crypt.c:26:35: warning: pointer targets in passing argument 2 of ‘crc32’ differ in signedness [-Wpointer-sign]
+   26 |   return crc32(crc ^ 0xffffffffL, &c, 1) ^ 0xffffffffL;
+      |                                   ^~
+      |                                   |
+      |                                   char *
+In file included from /usr/include/zlib.h:34,
+                 from zipint.h:39,
+                 from zip_crypt.c:20:
+/usr/include/zlib.h:1726:31: note: expected ‘const Bytef *’ {aka ‘const unsigned char *’} but argument is of type ‘char *’
+ 1726 | ZEXTERN uLong ZEXPORT crc32   OF((uLong crc, const Bytef *buf, uInt len));
+      |                               ^~
+zip_crypt.c: In function ‘init_keys’:
+zip_crypt.c:51:17: warning: comparison of integer expressions of different signedness: ‘int’ and ‘size_t’ {aka ‘long unsigned int’} [-Wsign-compare]
+   51 |   for (i = 0; i < len; i++) {
+      |                 ^
+zip_crypt.c: In function ‘decrypt_data’:
+zip_crypt.c:78:17: warning: comparison of integer expressions of different signedness: ‘int’ and ‘size_t’ {aka ‘long unsigned int’} [-Wsign-compare]
+   78 |   for (i = 0; i < n; i++) {
+      |                 ^
+zip_crypt.c: In function ‘copy_decrypt’:
+zip_crypt.c:98:43: warning: comparison of unsigned expression < 0 is always false [-Wtype-limits]
+   98 |   if (fread(buf, 1, ZIPENC_HEAD_LEN, src) < 0) {
+      |                                           ^
+zip_crypt.c:23:24: warning: comparison of integer expressions of different signedness: ‘off_t’ {aka ‘long int’} and ‘long unsigned int’ [-Wsign-compare]
+   23 | #define MIN(a, b) ((a) < (b) ? (a) : (b))
+      |                        ^
+zip_crypt.c:109:28: note: in expansion of macro ‘MIN’
+  109 |     if ((n = fread(buf, 1, MIN(len,  sizeof(buf)), src)) < 0) {
+      |                            ^~~
+zip_crypt.c:23:32: warning: operand of ?: changes signedness from ‘off_t’ {aka ‘long int’} to ‘long unsigned int’ due to unsignedness of other operand [-Wsign-compare]
+   23 | #define MIN(a, b) ((a) < (b) ? (a) : (b))
+      |                                ^~~
+zip_crypt.c:109:28: note: in expansion of macro ‘MIN’
+  109 |     if ((n = fread(buf, 1, MIN(len,  sizeof(buf)), src)) < 0) {
+      |                            ^~~
+zip_crypt.c: In function ‘encrypt_data’:
+zip_crypt.c:172:17: warning: comparison of integer expressions of different signedness: ‘int’ and ‘size_t’ {aka ‘long unsigned int’} [-Wsign-compare]
+  172 |   for (i = 0; i < n; i++) {
+      |                 ^
+zip_crypt.c: In function ‘copy_encrypt’:
+zip_crypt.c:23:24: warning: comparison of integer expressions of different signedness: ‘off_t’ {aka ‘long int’} and ‘long unsigned int’ [-Wsign-compare]
+   23 | #define MIN(a, b) ((a) < (b) ? (a) : (b))
+      |                        ^
+zip_crypt.c:200:28: note: in expansion of macro ‘MIN’
+  200 |     if ((n = fread(buf, 1, MIN(len,  sizeof(buf)), src)) < 0) {
+      |                            ^~~
+zip_crypt.c:23:32: warning: operand of ?: changes signedness from ‘off_t’ {aka ‘long int’} to ‘long unsigned int’ due to unsignedness of other operand [-Wsign-compare]
+   23 | #define MIN(a, b) ((a) < (b) ? (a) : (b))
+      |                                ^~~
+zip_crypt.c:200:28: note: in expansion of macro ‘MIN’
+  200 |     if ((n = fread(buf, 1, MIN(len,  sizeof(buf)), src)) < 0) {
+      |                            ^~~
+zip_crypt.c: In function ‘_zip_crypt’:
+zip_crypt.c:370:10: warning: implicit declaration of function ‘umask’ [-Wimplicit-function-declaration]
+  370 |   mask = umask(0);
+      |          ^~~~~
+zip_crypt.c:372:3: warning: implicit declaration of function ‘chmod’ [-Wimplicit-function-declaration]
+  372 |   chmod(za->zn, 0666&~mask);
+      |   ^~~~~
+zip_crypt.c: In function ‘copy_decrypt’:
+zip_crypt.c:98:7: warning: ignoring return value of ‘fread’, declared with attribute warn_unused_result [-Wunused-result]
+   98 |   if (fread(buf, 1, ZIPENC_HEAD_LEN, src) < 0) {
+      |       ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+zip_crypt.c: At top level:
+cc1: warning: unrecognized command line option ‘-Wno-self-assign’
+cc1: warning: unrecognized command line option ‘-Wno-parentheses-equality’
+cc1: warning: unrecognized command line option ‘-Wno-constant-logical-operand’
+compiling zip_delete.c
+compiling zip_dirent.c
+compiling zip_entry_free.c
+compiling zip_entry_new.c
+compiling zip_err_str.c
+compiling zip_error.c
+compiling zip_error_clear.c
+compiling zip_error_get.c
+compiling zip_error_get_sys_type.c
+compiling zip_error_strerror.c
+compiling zip_error_to_str.c
+compiling zip_fclose.c
+compiling zip_file_error_clear.c
+compiling zip_file_error_get.c
+compiling zip_file_get_offset.c
+compiling zip_file_strerror.c
+compiling zip_fopen.c
+compiling zip_fopen_index.c
+compiling zip_fread.c
+compiling zip_free.c
+compiling zip_get_archive_comment.c
+compiling zip_get_file_comment.c
+compiling zip_get_name.c
+compiling zip_get_num_files.c
+compiling zip_memdup.c
+compiling zip_name_locate.c
+compiling zip_new.c
+compiling zip_open.c
+compiling zip_rename.c
+compiling zip_replace.c
+compiling zip_set_archive_comment.c
+compiling zip_set_file_comment.c
+compiling zip_set_name.c
+compiling zip_source_buffer.c
+compiling zip_source_file.c
+compiling zip_source_filep.c
+zip_source_filep.c: In function ‘read_file’:
+zip_source_filep.c:115:14: warning: comparison of integer expressions of different signedness: ‘size_t’ {aka ‘long unsigned int’} and ‘off_t’ {aka ‘long int’} [-Wsign-compare]
+  115 |      n = len > z->remain ? z->remain : len;
+      |              ^
+zip_source_filep.c:115:28: warning: operand of ?: changes signedness from ‘off_t’ {aka ‘long int’} to ‘size_t’ {aka ‘long unsigned int’} due to unsignedness of other operand [-Wsign-compare]
+  115 |      n = len > z->remain ? z->remain : len;
+      |                            ^~~~~~~~~
+zip_source_filep.c: At top level:
+cc1: warning: unrecognized command line option ‘-Wno-self-assign’
+cc1: warning: unrecognized command line option ‘-Wno-parentheses-equality’
+cc1: warning: unrecognized command line option ‘-Wno-constant-logical-operand’
+compiling zip_source_free.c
+compiling zip_source_function.c
+compiling zip_source_zip.c
+zip_source_zip.c: In function ‘read_zip’:
+zip_source_zip.c:132:20: warning: comparison of integer expressions of different signedness: ‘off_t’ {aka ‘long int’} and ‘long unsigned int’ [-Wsign-compare]
+  132 |      i = (z->off-n > sizeof(b) ? sizeof(b) : z->off-n);
+      |                    ^
+zip_source_zip.c:132:46: warning: operand of ?: changes signedness from ‘off_t’ {aka ‘long int’} to ‘long unsigned int’ due to unsignedness of other operand [-Wsign-compare]
+  132 |      i = (z->off-n > sizeof(b) ? sizeof(b) : z->off-n);
+      |                                              ^~~~~~~~
+zip_source_zip.c:143:14: warning: comparison of integer expressions of different signedness: ‘size_t’ {aka ‘long unsigned int’} and ‘off_t’ {aka ‘long int’} [-Wsign-compare]
+  143 |      n = len > z->len ? z->len : len;
+      |              ^
+zip_source_zip.c:143:25: warning: operand of ?: changes signedness from ‘off_t’ {aka ‘long int’} to ‘size_t’ {aka ‘long unsigned int’} due to unsignedness of other operand [-Wsign-compare]
+  143 |      n = len > z->len ? z->len : len;
+      |                         ^~~~~~
+zip_source_zip.c: At top level:
+cc1: warning: unrecognized command line option ‘-Wno-self-assign’
+cc1: warning: unrecognized command line option ‘-Wno-parentheses-equality’
+cc1: warning: unrecognized command line option ‘-Wno-constant-logical-operand’
+compiling zip_stat.c
+compiling zip_stat_index.c
+compiling zip_stat_init.c
+compiling zip_strerror.c
+compiling zip_unchange.c
+compiling zip_unchange_all.c
+compiling zip_unchange_archive.c
+compiling zip_unchange_data.c
+compiling zipruby.c
+compiling zipruby_archive.c
+In file included from /home/felipe/.rbenv/versions/3.1.0/include/ruby-3.1.0/ruby/ruby.h:26,
+                 from /home/felipe/.rbenv/versions/3.1.0/include/ruby-3.1.0/ruby.h:38,
+                 from zipruby.h:4,
+                 from zipruby_archive.c:6:
+zipruby_archive.c: In function ‘Init_zipruby_archive’:
+/home/felipe/.rbenv/versions/3.1.0/include/ruby-3.1.0/ruby/internal/anyargs.h:287:135: warning: passing argument 3 of ‘rb_define_method_01’ from incompatible pointer type [-Wincompatible-pointer-types]
+  287 | #define rb_define_method(klass, mid, func, arity)           RBIMPL_ANYARGS_DISPATCH_rb_define_method((arity), (func))((klass), (mid), (func), (arity))
+      |                                                                                                                                       ^~~~~~
+      |                                                                                                                                       |
+      |                                                                                                                                       VALUE (*)(VALUE) {aka long unsigned int (*)(long unsigned int)}
+zipruby_archive.c:104:3: note: in expansion of macro ‘rb_define_method’
+  104 |   rb_define_method(Archive, "frevert", zipruby_archive_unchange, 1);
+      |   ^~~~~~~~~~~~~~~~
+/home/felipe/.rbenv/versions/3.1.0/include/ruby-3.1.0/ruby/internal/anyargs.h:276:21: note: expected ‘VALUE (*)(VALUE,  VALUE)’ {aka ‘long unsigned int (*)(long unsigned int,  long unsigned int)’} but argument is of type ‘VALUE (*)(VALUE)’ {aka ‘long unsigned int (*)(long unsigned int)’}
+  276 | RBIMPL_ANYARGS_DECL(rb_define_method, VALUE, const char *)
+      |                     ^~~~~~~~~~~~~~~~
+/home/felipe/.rbenv/versions/3.1.0/include/ruby-3.1.0/ruby/internal/anyargs.h:255:41: note: in definition of macro ‘RBIMPL_ANYARGS_DECL’
+  255 | RBIMPL_ANYARGS_ATTRSET(sym) static void sym ## _01(__VA_ARGS__, VALUE(*)(VALUE, VALUE), int); \
+      |                                         ^~~
+zipruby_archive.c: In function ‘zipruby_archive_get_name’:
+zipruby_archive.c:407:42: warning: format ‘%d’ expects argument of type ‘int’, but argument 3 has type ‘VALUE’ {aka ‘long unsigned int’} [-Wformat=]
+  407 |     rb_raise(Error, "Get name failed at %d: %s", index, zip_strerror(p_archive->archive));
+      |                                         ~^       ~~~~~
+      |                                          |       |
+      |                                          int     VALUE {aka long unsigned int}
+      |                                         %ld
+zipruby_archive.c: In function ‘zipruby_archive_add_io’:
+zipruby_archive.c:701:52: warning: format ‘%s’ expects argument of type ‘char *’, but argument 3 has type ‘struct RString *’ [-Wformat=]
+  701 |       rb_raise(rb_eRuntimeError, "Add io failed - %s: Entry name is not given", RSTRING(rb_inspect(file)));
+      |                                                   ~^
+      |                                                    |
+      |                                                    char *
+zipruby_archive.c:717:50: warning: format ‘%s’ expects argument of type ‘char *’, but argument 3 has type ‘struct RString *’ [-Wformat=]
+  717 |     rb_raise(rb_eRuntimeError, "Add io failed - %s: Cannot allocate memory", RSTRING(rb_inspect(file)));
+      |                                                 ~^
+      |                                                  |
+      |                                                  char *
+zipruby_archive.c:726:39: warning: format ‘%s’ expects argument of type ‘char *’, but argument 3 has type ‘struct RString *’ [-Wformat=]
+  726 |     rb_raise(Error, "Add io failed - %s: %s", RSTRING(rb_inspect(file)), zip_strerror(p_archive->archive));
+      |                                      ~^
+      |                                       |
+      |                                       char *
+zipruby_archive.c: In function ‘zipruby_archive_replace_io’:
+zipruby_archive.c:780:60: warning: format ‘%s’ expects argument of type ‘char *’, but argument 4 has type ‘struct RString *’ [-Wformat=]
+  780 |     rb_raise(rb_eRuntimeError, "Replace io failed at %d - %s: Cannot allocate memory", i_index, RSTRING(rb_inspect(file)));
+      |                                                           ~^
+      |                                                            |
+      |                                                            char *
+zipruby_archive.c:789:49: warning: format ‘%s’ expects argument of type ‘char *’, but argument 4 has type ‘struct RString *’ [-Wformat=]
+  789 |     rb_raise(Error, "Replace io failed at %d - %s: %s", i_index, RSTRING(rb_inspect(file)), zip_strerror(p_archive->archive));
+      |                                                ~^
+      |                                                 |
+      |                                                 char *
+zipruby_archive.c:796:49: warning: format ‘%s’ expects argument of type ‘char *’, but argument 4 has type ‘struct RString *’ [-Wformat=]
+  796 |     rb_raise(Error, "Replace io failed at %d - %s: %s", i_index, RSTRING(rb_inspect(file)), zip_strerror(p_archive->archive));
+      |                                                ~^
+      |                                                 |
+      |                                                 char *
+zipruby_archive.c: At top level:
+cc1: warning: unrecognized command line option ‘-Wno-self-assign’
+cc1: warning: unrecognized command line option ‘-Wno-parentheses-equality’
+cc1: warning: unrecognized command line option ‘-Wno-constant-logical-operand’
+compiling zipruby_error.c
+compiling zipruby_file.c
+In file included from /home/felipe/.rbenv/versions/3.1.0/include/ruby-3.1.0/ruby/ruby.h:26,
+                 from /home/felipe/.rbenv/versions/3.1.0/include/ruby-3.1.0/ruby.h:38,
+                 from zipruby.h:4,
+                 from zipruby_file.c:5:
+zipruby_file.c: In function ‘Init_zipruby_file’:
+/home/felipe/.rbenv/versions/3.1.0/include/ruby-3.1.0/ruby/internal/anyargs.h:287:135: warning: passing argument 3 of ‘rb_define_method_01’ from incompatible pointer type [-Wincompatible-pointer-types]
+  287 | #define rb_define_method(klass, mid, func, arity)           RBIMPL_ANYARGS_DISPATCH_rb_define_method((arity), (func))((klass), (mid), (func), (arity))
+      |                                                                                                                                       ^~~~~~
+      |                                                                                                                                       |
+      |                                                                                                                                       VALUE (*)(VALUE) {aka long unsigned int (*)(long unsigned int)}
+zipruby_file.c:54:3: note: in expansion of macro ‘rb_define_method’
+   54 |   rb_define_method(File, "unchange", zipruby_file_unchange, 1);
+      |   ^~~~~~~~~~~~~~~~
+/home/felipe/.rbenv/versions/3.1.0/include/ruby-3.1.0/ruby/internal/anyargs.h:276:21: note: expected ‘VALUE (*)(VALUE,  VALUE)’ {aka ‘long unsigned int (*)(long unsigned int,  long unsigned int)’} but argument is of type ‘VALUE (*)(VALUE)’ {aka ‘long unsigned int (*)(long unsigned int)’}
+  276 | RBIMPL_ANYARGS_DECL(rb_define_method, VALUE, const char *)
+      |                     ^~~~~~~~~~~~~~~~
+/home/felipe/.rbenv/versions/3.1.0/include/ruby-3.1.0/ruby/internal/anyargs.h:255:41: note: in definition of macro ‘RBIMPL_ANYARGS_DECL’
+  255 | RBIMPL_ANYARGS_ATTRSET(sym) static void sym ## _01(__VA_ARGS__, VALUE(*)(VALUE, VALUE), int); \
+      |                                         ^~~
+/home/felipe/.rbenv/versions/3.1.0/include/ruby-3.1.0/ruby/internal/anyargs.h:287:135: warning: passing argument 3 of ‘rb_define_method_01’ from incompatible pointer type [-Wincompatible-pointer-types]
+  287 | #define rb_define_method(klass, mid, func, arity)           RBIMPL_ANYARGS_DISPATCH_rb_define_method((arity), (func))((klass), (mid), (func), (arity))
+      |                                                                                                                                       ^~~~~~
+      |                                                                                                                                       |
+      |                                                                                                                                       VALUE (*)(VALUE) {aka long unsigned int (*)(long unsigned int)}
+zipruby_file.c:55:3: note: in expansion of macro ‘rb_define_method’
+   55 |   rb_define_method(File, "revert", zipruby_file_unchange, 1);
+      |   ^~~~~~~~~~~~~~~~
+/home/felipe/.rbenv/versions/3.1.0/include/ruby-3.1.0/ruby/internal/anyargs.h:276:21: note: expected ‘VALUE (*)(VALUE,  VALUE)’ {aka ‘long unsigned int (*)(long unsigned int,  long unsigned int)’} but argument is of type ‘VALUE (*)(VALUE)’ {aka ‘long unsigned int (*)(long unsigned int)’}
+  276 | RBIMPL_ANYARGS_DECL(rb_define_method, VALUE, const char *)
+      |                     ^~~~~~~~~~~~~~~~
+/home/felipe/.rbenv/versions/3.1.0/include/ruby-3.1.0/ruby/internal/anyargs.h:255:41: note: in definition of macro ‘RBIMPL_ANYARGS_DECL’
+  255 | RBIMPL_ANYARGS_ATTRSET(sym) static void sym ## _01(__VA_ARGS__, VALUE(*)(VALUE, VALUE), int); \
+      |                                         ^~~
+zipruby_file.c: At top level:
+zipruby_file.c:13:14: warning: ‘zipruby_file’ declared ‘static’ but never defined [-Wunused-function]
+   13 | static VALUE zipruby_file(VALUE klass);
+      |              ^~~~~~~~~~~~
+cc1: warning: unrecognized command line option ‘-Wno-self-assign’
+cc1: warning: unrecognized command line option ‘-Wno-parentheses-equality’
+cc1: warning: unrecognized command line option ‘-Wno-constant-logical-operand’
+compiling zipruby_stat.c
+compiling zipruby_zip.c
+compiling zipruby_zip_source_io.c
+compiling zipruby_zip_source_proc.c
+linking shared-object zipruby.so
+
+current directory: /home/felipe/DEV/ruby_bar_code_reader/vendor/cache/ruby/3.1.0/gems/zipruby-0.3.6/ext
+make DESTDIR\= install
+/usr/bin/install -c -m 0755 zipruby.so ./.gem.20220602-7609-hmcir0

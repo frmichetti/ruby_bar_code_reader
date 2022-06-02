@@ -3,7 +3,6 @@ source 'https://rubygems.org'
 
 gem 'puma'
 gem 'rghost'
-
 gem 'sinatra'
 gem 'zxing_cpp'
 gem 'zipruby'
