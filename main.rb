@@ -27,21 +27,37 @@ image.rotate "-180"
 image.crop "100%x25%+0+0"
 image.rotate "-180"
 
-image.trim '+repage'
-
-
-image.write "output.png"
+image.write "data/output.png"
 end
 
 post '/decode' do     
+    content_type :json
+      
+    attach_path = nil  
+  
+    unless params[:file]
+      return [400, {msg: "File is not provided"}.to_json]    
+    end   
+    
+    begin
+      attach_path = params[:file][:tempfile].path
 
-    attach_path = params[:file][:tempfile].path
-
-    decoded = ZXing.decode! Image.new(attach_path)
-    p decoded    
+      decoded = ZXing.decode! Image.new(attach_path)
+       
+      [200, {code: decoded}.to_json]
+    rescue ZXing::ReaderException => exception
+      [200, {msg: "No Code detected"}.to_json]
+    end
 end
 
-post '/pdf2png' do
+post '/pdf2png' do  
+      
+  attach_path = nil  
+
+  unless params[:file]
+    content_type :json
+    return [400, {msg: "File is not provided"}.to_json]    
+  end  
     
   attach_path = params[:file][:tempfile].path
   preview = RGhost::Convert.new(attach_path)
