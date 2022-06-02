@@ -201,4 +201,5 @@ fabric.properties
 
 boletos/*.pdf
 vendor
+output/*.png
 .bundle
