@@ -2,6 +2,9 @@ require 'sinatra'
 require 'rghost'
 require 'zipruby'
 require 'zxing'
+require "mini_magick"
+
+
 
 class Image
     attr_reader :path
@@ -10,8 +13,24 @@ class Image
     end
   end
 
-get '/' do
-  'Hello World'  
+get '/' do 
+  'Hello World!'
+end  
+
+get '/crop' do
+  
+image = MiniMagick::Image.open("data/boleto20220510-51214-e07e6a.png")
+image.path #=> "/var/folders/k7/6zx6dx6x7ys3rv3srh0nyfj00000gn/T/magick20140921-75881-1yho3zc.jpg"
+image.format "png"
+image.resize "1920x1080"
+image.rotate "-180"
+image.crop "100%x25%+0+0"
+image.rotate "-180"
+
+image.trim '+repage'
+
+
+image.write "output.png"
 end
 
 post '/decode' do     
