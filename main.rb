@@ -124,6 +124,49 @@ post '/decode' do
     end
 end
 
+post '/pdf2png_cropped' do 
+  attach_path = nil  
+
+  unless params[:file]
+    content_type :json
+    return [400, {msg: "File is not provided"}.to_json]    
+  end  
+    
+  attach_path = params[:file][:tempfile].path
+  preview = RGhost::Convert.new(attach_path)
+  
+  cfile = preview.to :png, :multipage => true, :resolution => 300  #returns an Array of Files
+
+  cropped_files = []
+  cfile.each do |file| 
+    
+    uuid = SecureRandom.uuid
+  
+      image = MiniMagick::Image.open(file)
+
+      image.format "png"
+
+      image.rotate "-180"
+      image.crop "100%x25%+0+0"
+      image.rotate "-180"
+      image.resize "1280x720"
+      image.write "output/#{uuid}.png" 
+    
+      cropped_files << "output/#{uuid}.png"
+  end   
+
+  zipfile = Tempfile.new('my.zip')
+  Zip::Archive.open(zipfile.path, Zip::CREATE) do |zip|
+ 
+    cropped_files.each do |file| 
+      zip.add_file file 
+    end     
+  end
+
+    send_file(zipfile.path, :filename => "#{params[:file][:filename].split('.')[0]}_cropped.zip", :type => "application/zip")
+
+end
+
 post '/pdf2png' do  
       
   attach_path = nil  
