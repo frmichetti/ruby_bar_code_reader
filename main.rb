@@ -4,8 +4,8 @@ require 'zipruby'
 require 'zxing'
 require 'mini_magick'
 require 'securerandom'
-
-
+require 'fileutils'
+require 'tempfile'
 
 
 class Image
@@ -43,6 +43,65 @@ image.rotate "-180"
 image.resize "1280x720"
 image.write "output/#{uuid}.png"
 send_file(image.path, :filename => "#{params[:file][:filename].split('.')[0]}.png", :type => "image/png")
+end
+
+post '/decode_batch' do
+  attach_path = nil  
+
+  unless params[:file]
+    content_type :json
+    return [400, {msg: "File is not provided"}.to_json]    
+  end  
+    
+  attach_path = params[:file][:tempfile].path
+  extracted_files = []
+
+  Zip::Archive.open(attach_path) do |ar|
+    n = ar.num_files # number of entries
+  
+    n.times do |i|
+      entry_name = ar.get_name(i) # get entry name from archive
+  
+      # open entry
+      ar.fopen(entry_name) do |f| # or ar.fopen(i) do |f|
+        
+        name = f.name           # name of the file
+        size = f.size           # size of file (uncompressed)
+        comp_size = f.comp_size # size of file (compressed)
+  
+        content = f.read # read entry content
+        
+        tmpfile = File.new("./extracted/#{f.name}", 'w')
+        tmpfile.puts(content)
+            
+        tmpfile.close
+
+        extracted_files << tmpfile.path
+
+      end
+    end
+  end
+
+  codes = []
+
+  extracted_files.each{|path|
+    decoded = ZXing.decode Image.new(path)
+
+    codes << {filename: path.split('./extracted/')[1], code: decoded}
+    
+    begin
+      File.open(path, 'r') do |f|
+        # do something with file
+        File.delete(f)
+      end
+    rescue Errno::ENOENT
+
+    end
+  }
+  
+  content_type :json
+  [200, {codes: codes}.to_json]
+
 end
 
 post '/decode' do     
