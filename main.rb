@@ -36,6 +36,13 @@ post '/crop' do
 image = MiniMagick::Image.open(attach_path)
 
 image.format "png"
+# image.flatten
+# image.fuzz '1%'
+# image.trim '+repage'
+# image.gravity 'south'
+# image.frame '0x50'
+# image.mattecolor 'white'
+# image.annotate "+0+25"
 
 image.rotate "-180"
 image.crop "100%x25%+0+0"
