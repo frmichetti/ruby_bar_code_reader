@@ -1,0 +1,49 @@
+{
+    "actions": [
+        {
+            "command": "rotate",
+            "value": "-180"
+        },
+        {
+            "command": "gravity",
+            "value": "center"
+        },
+        {
+            "command": "crop",
+            "value": "100%x35%+900+0"
+        },
+        {
+            "command": "rotate",
+            "value": "-180"
+        },
+        {
+            "command": "resize",
+            "value": "1280x720"
+        },
+        {
+            "command": "trim",
+            "value": "+repage"
+        },
+        {
+            "command": "page",
+            "value": "+20+20"
+        },        
+        {
+            "command": "background",
+            "value": "none"
+        },
+        {
+            "command": "flatten",
+            "value": null
+        },
+        {
+            "command": "frame",
+            "value": "500x0"
+        },
+        {
+            "command": "annotate",
+            "value": "+0+25"
+        }
+        
+    ]
+}
