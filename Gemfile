@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-# ruby '3.1.0'
+ruby '3.1.0'
 
 gem 'mini_magick', '~> 4.11'
 gem 'puma'
