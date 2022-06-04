@@ -1,0 +1,11 @@
+version: '3.5'
+services:
+  ruby:
+    build: .
+    environment:
+      RACK_ENV: DEV
+    command: rackup config.ru -p 4000
+    ports:
+      - "4000:4000"
+    volumes:
+      - .:/myapp
